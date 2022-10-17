@@ -1,15 +1,11 @@
 .contenedor-principal{
     display: grid;
     justify-content: center;
-    align-content: center;
     font-family: Lato,sans-serif;
 }
 
 .contenedor-title{
-    display: flex;
     background-color: rgba(116, 46, 46, 0.329);
-    justify-content: center;
-    align-items: center;
 }
 .contenedor-title img{
     float: left;
@@ -19,12 +15,14 @@
 }
 .title{
     margin-left: 20px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
 }
 
 
 .contenedor-form{
     display: flex;
-    flex-wrap: wrap;
     font-size: 14px;
     height: 850px;
 }
