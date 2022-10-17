@@ -1,0 +1,116 @@
+{% extends 'layout.html' %}
+{% block title %}
+    <link rel="stylesheet"  href="{{url_for('static',filename='form.css')}}">
+	<title>Welcome</title>
+{% endblock %}
+
+{% block body %}
+
+<div class="contenedor-principal">
+    <div class="contenedor-title">
+        <img src="https://post.healthline.com/wp-content/uploads/2019/04/Weed_Orange_732x549-thumbnail.jpg" alt="jose-imagen">
+        <div class="title">
+            <h1>{{nombre}} {{apellido}}</h1>
+            <p> BUSCADO/ OCUPADO</p>
+        </div>
+        
+    </div>
+
+    <div class="contenedor-form">
+        <div class="tab">
+            <div>
+                <h2>CONTACTO</h2>
+                <hr>
+                <ul>
+                    <li>{{telefono}}</li>
+                    <li>{{gmail}}</li>
+                    <li>{{pais}}</li>
+                </ul>
+            </div>
+            <div>
+                <h2>IDIOMAS</h2>
+                <hr>
+                <ul>
+                    {% for i in idiomas %}
+                    <li>{{i}}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div>
+                <h2>APTITUDES</h2>
+                <hr>
+                <ul>
+                    {% for i in aptitudes %}
+                    <li>{{i}}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div>
+                <h2>HABILIDADES</h2>
+                <hr>
+                <ul>
+                    {% for i in habilidades %}
+                    <li>{{i}}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div>
+                <h2>OTROS INTERESES</h2>
+                <hr>
+                <ul>
+                    <li>Creador de yincanas</li>
+                    <li>Paseos ecologicos grupales</li>
+                    <li>Lectura grupal en ingles</li>
+                </ul>
+            </div>
+        </div>
+        <div class="tab-content">
+            <h2>Perfil</h2>
+            <hr>
+            <p>{{descripcion}}</p>
+            
+            <h2>Experiencia Laboral</h2>
+            <hr>
+            <p class="ptitle">{{experiencia[0]}}</p>
+            <p class="pinline">{{pais}} <p class="anio">| 2022-actualmente</p> </p>
+            <ul>
+                <li>Coordinador y meditador entre los equipos de ayuda psicologica a jovenesy niños en exclusion social.</li>
+                <li>Velar por la salud mental del equipo y miembros involucrados en proyectos.</li>
+                <li>Mepeo de necesidades estrategicas y logicas para las diferentes areas</li>
+                <li>Monitor de ejercicios fisicos para adolecentes</li>
+                <li>Programar diferentes actividades extracurriculares en los involucrados</li>
+            </ul>
+
+            <p class="ptitle">{{experiencia[1]}}</p>
+            <p class="pinline">{{pais}} <p class="anio"> | 2020-2022</p></p>
+            <ul>
+                <li>Funciones para seguimientos de casos para jovenes con problemas de audiciones</li>
+                <li>Capacitacion e integracion vinculadas a medidas preventivas</li>
+                <li>Recopilacion de evidencias para auditorias y programas sociales</li>
+            </ul>
+
+            <p class="ptitle">{{experiencia[2]}}</p>
+            <p class="pinline">ZARAGOZA,España <p class="anio"> | 2019-2020</p></p>
+            <ul>
+                    <li>Profesor de lengua española e inglesa para jovenes inmigrantes</li>
+                    <li>Monitor de actividades ecologicas con adolecentes</li>
+                    <li>Coordinador de areas deportivas</li>
+            </ul>
+
+            <h2>FORMACION</h2>
+            <hr>
+            <p class="ptitle">Grado de Trabajo Social</p>
+            <p class="pinline">{{formacion[0]}}<p class="anio"> | 2012-2015</p></p>
+            <p class="ptitle">Licenciatura Profesional</p>
+            <p class="pinline">{{formacion[1]}}<p class="anio"> | 2011-2012</p></p>
+
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}

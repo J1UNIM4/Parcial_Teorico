@@ -1,0 +1,63 @@
+{% extends 'layout.html' %}
+{% block title %}
+    <link rel="stylesheet"  href="{{url_for('static',filename='sesion.css')}}">
+	<title>Welcome</title>
+{% endblock %}
+
+{% block body %}
+<h1 class ="title"> Bienvenido {{nombre}}</h1>
+<div class="container">
+    <form action="{{ url_for('formulario')}}" method="post">
+  
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+  
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+      <label for="num">Phone</label>
+      <input type="number" id="num" name="telefono" placeholder="Your phone..">
+    
+      <label for="icountry">Cuntry</label>
+      <input type="text" id="icountry" name="country" placeholder="Your country..">
+
+      <label for="iemail">Email</label>
+      <input type="email" id="iemail" name="gmail" placeholder="Your gmail ..">
+
+      <label for="i-idiomas">Idiomas</label>
+      <input type="text" id="i-idiomas" name="idiomas1" >
+      <input type="text" id="i-idiomas" name="idiomas2" >
+      <input type="text" id="i-idiomas" name="idiomas3" >
+
+      <label for="i-aptitudes">APTITUDES</label>
+      <input type="text" id="i-aptitudes" name="aptitudes1" >
+      <input type="text" id="i-aptitudes" name="aptitudes2" >
+      <input type="text" id="i-aptitudes" name="aptitudes3" >
+      <input type="text" id="i-aptitudes" name="aptitudes4" >
+      <input type="text" id="i-aptitudes" name="aptitudes5" >        
+      
+      <label for="i-habilidades">HABILIDADES</label>
+      <input type="text" id="i-habilidades" name="habilidades1" >
+      <input type="text" id="i-habilidades" name="habilidades2" >
+      <input type="text" id="i-habilidades" name="habilidades3" >
+      <input type="text" id="i-habilidades" name="habilidades4" >  
+
+
+      <label for="i-experiencia">Experiencia Laboral</label>
+      <input type="text" id="i-experiencia" name="experiencia1" >
+      <input type="text" id="i-experiencia" name="experiencia2" >
+      <input type="text" id="i-experiencia" name="experiencia3" > 
+
+      <label for="i-grado1">Grado de trabajo Social</label>
+      <textarea id="i-grado1" name="grado1"></textarea>
+      <label for="i-grado2">Licenciatura Profesional</label>
+      <textarea id="i-grado2" name="grado2"></textarea>
+
+      <label for="i-descripcion">Descripcion</label>
+      <textarea id="i-descripcion" name="descripcion" placeholder="Write something.." style="height:200px"></textarea>
+  
+      <button >Submit</button>
+  
+    </form>
+</div>
+{% endblock %}
